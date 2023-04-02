@@ -17,7 +17,7 @@ This question could be addressed using a logistic regression or SVM where the pr
 
 Logistic regression - number of flower-insect interactions vs seed mass
 ```{r}
-data <- read.csv("C:/Users/Kerri/OneDrive - Queen's University/5th year/Winter/BIOL432/BIOL432_FinalProject/Soper_Gorden_Adler_AJB_2018_Flower_Insect_Interactions_Processed_Data.csv")
+data <- read.csv("Soper_Gorden_Adler_AJB_2018_Flower_Insect_Interactions_Processed_Data.csv")
 
 CH <- data %>% select("Plot_Number", "Treatment",
                         "Average_CH_Seed_Mass",
@@ -106,7 +106,7 @@ library(vegan)
 
 Data
 ```{r}
-data <- read.csv("C:/Users/Kerri/OneDrive - Queen's University/5th year/Winter/BIOL432/BIOL432_FinalProject/Soper_Gorden_Adler_AJB_2018_Flower_Insect_Interactions_Processed_Data.csv") %>% select(c(Robbing,Florivory,Pollination,Average_Seeds_Per_CH_Fruit,Average_Seeds_Per_CL_Fruit,Average_CH_Seed_Mass,Average_CL_Seed_Mass))
+data <- read.csv("Soper_Gorden_Adler_AJB_2018_Flower_Insect_Interactions_Processed_Data.csv") %>% select(c(Robbing,Florivory,Pollination,Average_Seeds_Per_CH_Fruit,Average_Seeds_Per_CL_Fruit,Average_CH_Seed_Mass,Average_CL_Seed_Mass))
 
 longdata <- gather(data, interaction, yn, Robbing:Pollination, factor_key = T) %>% na.omit() %>% filter(!yn == "N")
 
@@ -194,7 +194,7 @@ NMDS
 
 NDMS_Plot <- ggarrange(CLM_Plot, CHM_Plot, labels = "AUTO", nrow = 1, ncol = 2, common.legend = TRUE)
 
-ggsave("NMDSPlot.png", plot = NDMS_Plot, path = "C:/Users/Kerri/OneDrive - Queen's University/5th year/Winter/BIOL432/BIOL432_FinalProject", width = 7, height = 5)
+ggsave("NMDSPlot.png", plot = NDMS_Plot, width = 7, height = 5)
 
 ```
 
