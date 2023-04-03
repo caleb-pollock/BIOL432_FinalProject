@@ -13,8 +13,6 @@ library(e1071)
 
 ```
 
-This question could be addressed using a logistic regression or SVM where the predictor variables are the flower-insect interactions and the target variable is the seed mass or number of fruits produced. This question could be addressed using a support vector machine to develop a classification or regression model that separates high- and low-fruit producing plants based on their flower-insect interaction patterns. 
-
 Logistic regression - number of flower-insect interactions vs seed mass
 ```{r}
 data <- read.csv("Soper_Gorden_Adler_AJB_2018_Flower_Insect_Interactions_Processed_Data.csv")

@@ -99,6 +99,4 @@ rpart.plot(SeedMassTree, fallen.leaves = TRUE)
 
 ```{r}
 seed_mass_predictions <- predict(SeedMassTree, newdata = test, type = "class")
-
-
 ```
